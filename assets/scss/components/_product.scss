@@ -1,0 +1,26 @@
+.product__small-card {
+    background-color: #fff;
+    color: $dark;
+    border-radius: 3px;
+    // transition: all 4s ease;
+
+    // &:hover {
+    //     transform: perspective(1em) rotateX(0.3deg);
+    // }
+}
+
+.product__image-bg {
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+  .product-info__background {
+    background-color: #00000085;
+    border: 1px inset #fbff00;
+    border-radius: 5px;
+  }
+  .line-hr {
+    border: none; /* Убираем границу */
+    background-color: #707070be; /* Цвет линии */
+    color: #707070be; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+  }

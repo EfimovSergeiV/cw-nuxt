@@ -1,0 +1,107 @@
+#svarog {
+  color: $light;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.svarog__left-container {
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  // background-color: rgba(0,0,0,0.3);
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  &:hover {
+    box-shadow: 0 0 10px rgba(247, 202, 0, 0.5);
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+  }
+}
+
+
+.svarog__r-banner {
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    // background-color: rgba(0,0,0,0.3);
+    border-radius: 3px;
+    width: 100%;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    &:hover {
+      box-shadow: 0 0 10px rgba(247, 202, 0, 0.5);
+      -webkit-transition: 2s;
+      -moz-transition: 2s;
+      -ms-transition: 2s;
+      -o-transition: 2s;
+      transition: 2s;
+    }
+}
+
+
+.svarog__bottom-container {
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  position: relative;
+  width: 350px;
+  height: 250px;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  &:hover {
+    box-shadow: 0 0 10px rgba(247, 202, 0, 0.5);
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+  }
+}
+
+.svarog__bottom-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.svarog__bottom-video-text {
+  background-color: #000000da;
+  position: absolute;
+  border-radius: 0 0 0 60%;
+  text-align: right;
+  padding:  10px 10px 15px 20px;
+  top: 0;
+  right: 0;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  &:hover {
+    background-color: #000000ea;
+    text-align: right;
+    top: 0;
+    right: 0;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+  }
+  a {
+    color: $light;
+    &:hover {
+      color: $light;
+    } 
+  }
+}

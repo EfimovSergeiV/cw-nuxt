@@ -1,0 +1,9 @@
+services:
+    nuxt:
+      build: .nuxt
+      container_name: nuxt-glsvar
+      restart: always
+      ports:
+        - "3001:3001"
+      command:
+        "npm run start"

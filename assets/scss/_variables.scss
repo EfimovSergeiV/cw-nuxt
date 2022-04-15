@@ -1,0 +1,63 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 640px,
+  lg: 992px,
+  xl: 1300px
+);
+$enable-rounded: true;
+
+
+$default:       #fff700 !default;
+$primary:       #2c2c2c !default; //// Текст на страницах/ и чекбоксы/ пагинация
+$secondary:     #1b1b1b !default; /// Верхние кнопки и кнопки в формах
+$success:       #28a745 !default;
+$info:          #17a2b8 !default;
+$warning:       #f8dc08 !default;
+$danger:        #e42828 !default;
+$light:         #f0f0f0 !default;
+$white:         #e4e4e4 !default;
+$dark:          #202020 !default; ///header navigation
+
+$theme-color: () !default;
+$theme-color: map-merge((
+  "default":      $default,
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "light":        $light,
+  "white":        $white,
+  "dark":         $dark,
+), $theme-color);
+
+$pagination-padding-y:              .5rem !default;
+$pagination-padding-x:              .75rem !default;
+$pagination-padding-y-sm:           .25rem !default;
+$pagination-padding-x-sm:           .5rem !default;
+$pagination-padding-y-lg:           .75rem !default;
+$pagination-padding-x-lg:           1.5rem !default;
+$pagination-line-height:            1.25 !default;
+$pagination-color:                  $dark !default;
+$pagination-bg:                     $white !default;
+$pagination-border-width:           0 !default;
+$pagination-border-color:           $warning !default;
+$pagination-focus-box-shadow:       0 !default;
+$pagination-focus-outline:          0 !default;
+$pagination-hover-color:            $dark !default;
+$pagination-hover-bg:               $warning !default;
+$pagination-hover-border-color:     $warning !default;
+$pagination-active-color:           $dark !default;
+$pagination-active-bg:              $warning !default;
+$pagination-active-border-color:    $warning !default;
+$pagination-disabled-color:         $dark !default;
+$pagination-disabled-bg:            $white !default;
+$pagination-disabled-border-color:  $warning !default;
+
+$dropdown-min-width:                55vw !default;
+$dropdown-color:                    $light !default;
+$dropdown-bg:                       #202020f0 !default;
+$dropdown-border-color:             $warning !default;
+$dropdown-link-color:               $light !default;
