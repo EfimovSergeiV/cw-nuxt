@@ -9,11 +9,11 @@
       </b-col>
     </b-row>
 
-    <b-row>
+    <!-- <b-row>
       <b-col cols="12">
         {{ order }}
       </b-col>
-    </b-row>
+    </b-row> -->
   </div>
 </template>
 

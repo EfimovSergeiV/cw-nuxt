@@ -188,7 +188,7 @@
           </b-col>
         </b-row>
       </div>
-      <b-row class="mt-2">
+      <b-row class="mt-2" style="min-height: 15vh">
         <b-col cols="12" md="6">
           <b-row>
             <b-col cols="12">
@@ -222,7 +222,7 @@
             @input="clientEmail"
           ></b-form-input>
           <b-form-invalid-feedback id="email">
-            неверно указан адрес
+            Укажите правильно ваш адрес email
           </b-form-invalid-feedback>
         </b-col>
       </b-row>
@@ -238,8 +238,8 @@
           ></b-form-textarea>
         </b-col>
       </b-row>
-      <b-row class="mt-2">
-        <b-col cols="12" md="6">
+      <b-row class="mt-2 mb-2">
+        <b-col cols="12" lg="7">
           <small
             >Совершая заказ, вы соглашаетесь с
             <a v-b-modal.modal-tall class="text-warning hr ml-1 mr-1">
@@ -247,18 +247,18 @@
             </a>
           </small>
         </b-col>
-        <b-col cols="12" md="6" class="mt-4">
+        <b-col cols="12" lg="5" class="mt-4 mb-4 text-right">
           <div v-if="!re_token">
-            <b-btn variant="warning" size="lg" block @click="ImNotRobot">
+            <b-btn variant="warning" block size="lg" @click="ImNotRobot">
               Проверка на робота (сделать заказ)
             </b-btn>
           </div>
           <div v-else>
             <b-btn
               variant="warning"
-              size="lg"
-              :disabled="!phoneState"
               block
+              size="lg"
+              :disabled="!phoneState || !emailState"
               @click="sendOrder"
             >
               Сделать заказ
@@ -356,6 +356,8 @@ export default {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       if (this.client.email) {
         return this.client.email.search(re) !== -1
+      } else if (this.payMethod === 'online') {
+        return false
       } else {
         return true
       }

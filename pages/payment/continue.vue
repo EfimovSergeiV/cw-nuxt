@@ -1,6 +1,7 @@
 <template>
   <div class="text-light">
-    <b-row class="mt-4 mb-4">
+    <p>Страница находится в производстве</p>
+    <!-- <b-row class="mt-4 mb-4">
       <b-col cols="6">
         <b-row>
           <b-col cols="12">
@@ -42,26 +43,26 @@
           Перейти на страницу оплаты
         </a>
       </b-col>
-    </b-row>
+    </b-row> -->
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      orderNumber: null,
-      orderId: null,
-    }
-  },
-  methods: {
-    sendOrderCode() {
-      this.$axios
-        .$post(`sber/continue/`, {
-          orderNumber: this.orderNumber,
-        })
-        .then((response) => (this.orderId = response.orderId))
-    },
-  },
+  // data() {
+  //   return {
+  //     orderNumber: null,
+  //     orderId: null,
+  //   }
+  // },
+  // methods: {
+  //   sendOrderCode() {
+  //     this.$axios
+  //       .$post(`sber/continue/`, {
+  //         orderNumber: this.orderNumber,
+  //       })
+  //       .then((response) => (this.orderId = response.orderId))
+  //   },
+  // },
 }
 </script>
