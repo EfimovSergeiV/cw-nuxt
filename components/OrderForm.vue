@@ -249,13 +249,14 @@
         </b-col>
         <b-col cols="12" md="6" class="mt-4">
           <div v-if="!re_token">
-            <b-btn variant="light" block @click="ImNotRobot">
+            <b-btn variant="warning" size="lg" block @click="ImNotRobot">
               Проверка на робота (сделать заказ)
             </b-btn>
           </div>
           <div v-else>
             <b-btn
-              variant="light"
+              variant="warning"
+              size="lg"
               :disabled="!phoneState"
               block
               @click="sendOrder"
@@ -438,7 +439,7 @@ export default {
           client_product: this.cart,
         })
         .then((response) => {
-          if (this.payMethod) {
+          if (this.payMethod === 'online') {
             this.$router.push({
               name: 'payment',
               query: { order: response.order },
