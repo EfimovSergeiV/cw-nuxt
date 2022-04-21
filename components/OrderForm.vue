@@ -15,7 +15,7 @@
       </b-row>
     </div>
     <div class="light-border-cart p-2" style="border-radius: 4px">
-      <b-row v-if="!testIP()" class="mb-2">
+      <b-row v-if="false" class="mb-2">
         <b-col class="text-light" cols="12">
           <CDEK
             :regions="regions"
@@ -65,15 +65,15 @@
           <b-form-radio-group
             id="btn-deleviry"
             v-model="delivery"
-            :disabled="testIP()"
+            :disabled="true"
             button-variant="dark"
             :options="deliverymethods"
             name="delivery"
           ></b-form-radio-group>
         </b-col>
-        <b-col v-if="!testIP()" cols="12">
+        <!-- <b-col v-if="!testIP()" cols="12">
           <small>testuser from {{ ip }}</small>
-        </b-col>
+        </b-col> -->
       </b-row>
 
       <b-row class="mt-2">
@@ -195,7 +195,7 @@
               <small>Выберите способ оплаты:</small>
               <b-form-select
                 v-model="payMethod"
-                :disabled="testIP()"
+                :disabled="true"
                 class="point-cursor"
                 :options="payMethods"
               ></b-form-select>
@@ -390,13 +390,13 @@ export default {
         )
       }
     },
-    testIP() {
-      if (this.ip === '91.204.138.138') {
-        return false
-      } else {
-        return true
-      }
-    },
+    // testIP() {
+    //   if (this.ip === '91.204.138.138') {
+    //     return false
+    //   } else {
+    //     return true
+    //   }
+    // },
     getProductValues(productData) {
       let selValues = null
       productData.forEach((element) => {
