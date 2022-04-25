@@ -6,37 +6,59 @@
           <h6>Нам интересно ваше мнение</h6>
         </div>
       </b-col>
-      <b-col cols="3"></b-col>
+      <b-col class="text-right" cols="3">
+        <b-btn variant="link" size="sm" @click.prevent="slideNext">
+          следующий
+        </b-btn>
+      </b-col>
     </b-row>
     <div class="p-2 vote-body">
-      <b-row align-v="center" class="h-100">
-        <b-col cols="6">
-          <b-row>
-            <b-col class="text-center" cols="12">
-              <h4>{{ vote }}</h4>
+      <hooper
+        ref="carousel"
+        :wheel-control="false"
+        :infinite-scroll="true"
+        :play-speed="40000"
+        :transition="1200"
+        :auto-play="true"
+        :vertical="true"
+        style="height: 100%"
+        @slide="updateCarousel"
+      >
+        <slide v-for="i in 5" :key="i">
+          <b-row align-v="center" class="h-100">
+            <b-col cols="6">
+              <b-row>
+                <b-col class="text-center" cols="12">
+                  <h4>{{ vote }}</h4>
+                </b-col>
+              </b-row>
+            </b-col>
+            <b-col cols="6">
+              <b-row>
+                <b-col cols="12">
+                  <b-form-group>
+                    <b-form-radio-group
+                      id="btn-radios-3"
+                      v-model="answer"
+                      :options="answers"
+                      size="lg"
+                      name="radio-btn-stacked"
+                      stacked
+                    ></b-form-radio-group>
+                  </b-form-group>
+                </b-col>
+              </b-row>
             </b-col>
           </b-row>
-        </b-col>
-        <b-col cols="6">
-          <b-row>
-            <b-col cols="12">
-              <b-form-group>
-                <b-form-radio-group
-                  id="btn-radios-3"
-                  v-model="answer"
-                  :options="answers"
-                  size="lg"
-                  name="radio-btn-stacked"
-                  stacked
-                ></b-form-radio-group>
-              </b-form-group>
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
+        </slide>
+      </hooper>
     </div>
     <b-row>
-      <b-col cols="4"></b-col>
+      <b-col cols="4">
+        <b-btn variant="link" size="sm" @click.prevent="slidePrev">
+          предыдущий
+        </b-btn>
+      </b-col>
       <b-col class="text-right" cols="8">
         <div class="p-1 vote-footer">
           <b-btn style="box-shadow: 0 0 10px #000000" variant="warning"
@@ -49,7 +71,13 @@
 </template>
 
 <script>
+import { Hooper, Slide } from 'hooper'
+
 export default {
+  components: {
+    Hooper,
+    Slide,
+  },
   data() {
     return {
       vote:
@@ -65,7 +93,24 @@ export default {
         { value: 3, text: 'Excepteur sint occaecat cupidatat' },
         { value: 4, text: 'Excepteur sint occaecat cupidatat' },
       ],
+      carouselData: 0,
     }
+  },
+  watch: {
+    carouselData() {
+      this.$refs.carousel.slideTo(this.carouselData)
+    },
+  },
+  methods: {
+    slidePrev() {
+      this.$refs.carousel.slidePrev()
+    },
+    slideNext() {
+      this.$refs.carousel.slideNext()
+    },
+    updateCarousel(payload) {
+      this.myCarouselData = payload.currentSlide
+    },
   },
 }
 </script>
