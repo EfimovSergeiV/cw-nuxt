@@ -10,7 +10,7 @@
     </b-row>
     <b-row align-v="center">
       <b-col class="h-100" cols="6">
-        <div class="bg-light p-2">
+        <div class="bg-light p-2 text-center">
           <h4>{{ vote }}</h4>
         </div>
       </b-col>
@@ -21,7 +21,6 @@
               :id="num"
               v-model="answer"
               :options="answers"
-              size="lg"
               name="radio-btn-stacked"
               stacked
             ></b-form-radio-group>
@@ -49,18 +48,16 @@
 export default {
   data() {
     return {
-      vote:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?',
+      vote: 'Каким образом Вы узнали о нашем сайте',
       answer: 1,
       answers: [
-        { value: 1, text: 'Excepteur sint occaecat cupidatat' },
+        { value: 1, text: 'Видел рекламу на улице/интернете' },
         {
           value: 2,
-          text:
-            'Excepteur sint occaecat cupidatat sint occaecat cupidatat cupidatat sint occaecat cupidatat',
+          text: 'Нашёл через поисковые сети (Google, Яндекс...)',
         },
-        { value: 3, text: 'Excepteur sint occaecat cupidatat' },
-        { value: 4, text: 'Excepteur sint occaecat cupidatat' },
+        { value: 3, text: 'Давно являюсь постоянным клиентом' },
+        { value: 4, text: 'Другой вариант' },
       ],
       carouselData: 0,
     }
