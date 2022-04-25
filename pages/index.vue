@@ -2,6 +2,7 @@
   <div>
     <MainSection :cts="cts" :mbanners="mbanners" />
     <ESABsection :products="esab" :banners="[]" />
+    <VoteSection />
     <Svarog />
     <Promo :recommend="recommend" :mpromobs="mpromobs" />
     <Neues :neues="neues" />
@@ -12,6 +13,7 @@
 <script>
 import MainSection from '../components/sections/MainSection.vue'
 import ESABsection from '../components/sections/ESABsection.vue'
+import VoteSection from '../components/sections/VoteSection.vue'
 import Svarog from '../components/Svarog'
 import Promo from '../components/Promo'
 import Neues from '../components/Neues'
@@ -21,6 +23,7 @@ export default {
   components: {
     MainSection,
     ESABsection,
+    VoteSection,
     Svarog,
     Promo,
     Neues,
