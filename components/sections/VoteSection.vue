@@ -7,8 +7,8 @@
         </div>
       </b-col>
       <b-col class="text-right" cols="3">
-        <b-btn variant="link" size="sm" @click.prevent="slideNext">
-          следующий
+        <b-btn variant="link" size="sm" @click.prevent="slidePrev">
+          предыдущий
         </b-btn>
       </b-col>
     </b-row>
@@ -55,8 +55,8 @@
     </div>
     <b-row>
       <b-col cols="4">
-        <b-btn variant="link" size="sm" @click.prevent="slidePrev">
-          предыдущий
+        <b-btn variant="link" size="sm" @click.prevent="slideNext">
+          следующий
         </b-btn>
       </b-col>
       <b-col class="text-right" cols="8">
