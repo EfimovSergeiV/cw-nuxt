@@ -223,6 +223,9 @@
             </div>
           </b-col>
         </b-row>
+
+        <RecWithProductVue :products="recommends" class="mt-4" />        
+
       </div>
     </div>
     <Subscriebe />
@@ -237,6 +240,7 @@ import ProductPreviewSec from '@/components/sections/ProductPreviewSec.vue'
 import Subscriebe from '@/components/modals/Subscriebe.vue'
 import CartModal from '../../components/modals/CartModal.vue'
 import CDEK from '../../components/widgets/SDEK.vue'
+import RecWithProductVue from '~/components/sections/RecWithProduct.vue'
 
 export default {
   components: {
@@ -245,6 +249,7 @@ export default {
     CartModal,
     ProductReviewSec,
     ProductPreviewSec,
+    RecWithProductVue,
   },
   async asyncData({ params, $axios }) {
     const ip = await $axios.$get(`myip/`)
@@ -254,7 +259,10 @@ export default {
     const breadcrumbs = await $axios.$get(
       `c/breadcrumb/?ct=${product.category.id}`
     )
-    return { ip, product, breadcrumbs, reviews, regions }
+    const recommends = await $axios.$get(
+      `c/recommend/`, { params: {"ct": product.category.id}}
+    )
+    return { ip,  product, breadcrumbs, reviews, regions, recommends }
   },
   data() {
     return {

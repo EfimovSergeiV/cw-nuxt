@@ -114,10 +114,10 @@ export default {
       type: Array,
       default: Array,
     },
-    recommend: {
-      type: Array,
-      default: Array,
-    },
+    // recommend: {
+    //   type: Array,
+    //   default: Array,
+    // },
   },
   // data() {
   //   return {
