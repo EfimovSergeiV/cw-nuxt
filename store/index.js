@@ -11,7 +11,7 @@ export const state = () => ({
   selct: [],
   selectedShop: {
     region_code: 'MOW',
-    adress: 'Москва, МКАД 41-й км 4с32 (ТОГК "Славянский мир")',
+    adress: 'Москва, Ткацкая улица, 5, с16',
     shop: 9,
   },
   statusCartModal: null,
@@ -38,7 +38,7 @@ export const state = () => ({
     shop_id: 9,
     region_code: 'MOW',
     city: 'Москва',
-    adress: 'Москва, МКАД 41-й км 4с32 (ТОГК "Славянский мир")',
+    adress: 'Москва, Ткацкая улица, 5, с16',
     phones: [
       { number: '+7 (495) 970-30-43', link: '+74959703043' },
       // { number: '+7 (495) 970-40-63', link: '+74959704063' },
@@ -52,18 +52,18 @@ export const state = () => ({
       shop: null,
     },
     {
-      title: 'Москва, МКАД 41-й км 4с32 (ТОГК "Славянский мир")',
+      title: 'Москва, Ткацкая улица, 5, с16',
       shop: {
         shop_id: 9,
         region_code: 'MOW',
         city: 'Москва',
-        adress: 'Москва, МКАД 41-й км 4с32 (ТОГК "Славянский мир")',
+        adress: 'Москва, Ткацкая улица, 5, с16',
         phones: [
           { number: '+7 (495) 970-30-43', link: '+74959703043' },
           // { number: '+7 (495) 970-40-63', link: '+74959704063' },
         ],
         mapurl:
-          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1736.7848792001491!2d37.46429181342134!3d55.63105073225911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5529bc576d34f%3A0xe38181dc80c841c!2z0JzQmtCQ0JQsIDQxLdC5INC60LwsINCc0L7RgdC60LLQsCwgMTE3MzIx!5e0!3m2!1sru!2sru!4v1649150619736!5m2!1sru!2sru',
+          'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2243.404542248942!2d37.720199565936056!3d55.78621303056229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JzQvtGB0LrQstCwLCDQotC60LDRhtC60LDRjyDRg9C70LjRhtCwLCA1LCDRgTE2!5e0!3m2!1sru!2sru!4v1657104378422!5m2!1sru!2sru',
       },
     },
     {
@@ -195,7 +195,7 @@ export const state = () => ({
   listShops: [
     {
       region_code: 'MOW',
-      adress: 'Москва, МКАД 41-й км 4с32 (ТОГК "Славянский мир")',
+      adress: 'Москва, Ткацкая улица, 5, с16',
       shop: 9,
     },
     {
