@@ -3,6 +3,7 @@
     <MainSection :cts="cts" :mbanners="mbanners" />
     <ESABsection :products="esab" :banners="[]" />
     <!-- <VoteSection /> -->
+    <MWeld :product="mweld" />
     <Svarog />
     <Promo :mpromobs="mpromobs" />
     <RecWithProductVue :products="recommends" />    
@@ -20,6 +21,7 @@ import Promo from '../components/Promo'
 import Neues from '../components/Neues'
 import Brands from '../components/Brands'
 import RecWithProductVue from '~/components/sections/RecWithProduct.vue'
+import MWeld from '../components/sections/MWeld.vue'
 
 export default {
   components: {
@@ -31,7 +33,8 @@ export default {
     Neues,
     Brands,
     RecWithProductVue,
-  },
+    MWeld
+},
   async asyncData({ $axios }) {
     const mbanners = await $axios.$get('c/mainbanner/')
     const cts = await $axios.$get('c/ct/')
@@ -39,8 +42,9 @@ export default {
     const neues = await $axios.$get('c/neues/')
     const mpromobs = await $axios.$get('c/mpromob/')
     const recommends = await $axios.$get(`c/recommend/`)
+    const mweld = await $axios.$get(`c/prod/1835/`)
 
-    return { mbanners, cts, neues, mpromobs, esab, recommends }
+    return { mbanners, cts, neues, mpromobs, esab, recommends, mweld }
   },
   data() {
     return {

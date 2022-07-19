@@ -147,6 +147,12 @@
           </b-col>
         </b-row>
 
+        <b-row class="mt-4" v-if="product.category.id === 5 && product.id != 1835">
+          <b-col cols="12">
+            <MWeld :product="mweld" />
+          </b-col>
+        </b-row>
+
         <b-row class="mt-4 mh-40">
           <b-col cols="12">
             <div class="mb-4 prod-comp-block h-100">
@@ -241,6 +247,7 @@ import Subscriebe from '@/components/modals/Subscriebe.vue'
 import CartModal from '../../components/modals/CartModal.vue'
 import CDEK from '../../components/widgets/SDEK.vue'
 import RecWithProductVue from '~/components/sections/RecWithProduct.vue'
+import MWeld from '../../components/sections/MWeld.vue'
 
 export default {
   components: {
@@ -250,19 +257,21 @@ export default {
     ProductReviewSec,
     ProductPreviewSec,
     RecWithProductVue,
+    MWeld,
   },
   async asyncData({ params, $axios }) {
     const ip = await $axios.$get(`myip/`)
     const product = await $axios.$get(`c/prod/${params.id}`)
     const reviews = await $axios.$get(`u/reviews/?prod_id=${params.id}`)
     const regions = await $axios.$get(`o/cdek/regions/`)
+    const mweld = await $axios.$get(`c/prod/1835/`)
     const breadcrumbs = await $axios.$get(
       `c/breadcrumb/?ct=${product.category.id}`
     )
     const recommends = await $axios.$get(
       `c/recommend/`, { params: {"ct": product.category.id}}
     )
-    return { ip,  product, breadcrumbs, reviews, regions, recommends }
+    return { ip,  product, breadcrumbs, reviews, regions, recommends, mweld }
   },
   data() {
     return {

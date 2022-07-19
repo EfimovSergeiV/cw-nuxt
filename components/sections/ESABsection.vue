@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2">
+  <div class="mt-2 mb-2">
     <b-row class="esab-logo">
       <b-col cols="12">
         <b-row align-v="center">
@@ -90,7 +90,7 @@
       </b-col>
     </b-row>
 
-    <b-row class="mb-3 d-none d-md-none d-lg-block">
+    <b-row class=" d-none d-md-none d-lg-block">
       <b-col cols="12">
         <hooper
           :items-to-show="4"
