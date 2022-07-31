@@ -5,7 +5,7 @@
       <b-col lg="4" xl="6">
         <b-row class="h-100" align-v="center">
           <b-col cols="12">
-            <b-img src="https://api.glsvar.ru/files/c/m-welt.png" rounded fluid alt="Responsive image"></b-img>
+            <b-img src="https://api.glsvar.ru/files/c/mwelt12.png" rounded fluid alt="Responsive image"></b-img>
           </b-col>
         </b-row>
       </b-col>
