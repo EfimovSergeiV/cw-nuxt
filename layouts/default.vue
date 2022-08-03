@@ -116,7 +116,7 @@ export default {
         .scrollIntoView({ behavior: 'smooth' })
     },
     makeMessage() {
-      if (this.messagetoast) {
+      if (this.messagetoast && !localStorage.showMessage) {
         this.$bvModal.show('message')
       }
     },

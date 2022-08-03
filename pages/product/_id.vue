@@ -382,7 +382,7 @@ export default {
         .scrollIntoView({ behavior: 'smooth' })
     },
     registerToast() {
-      if (!this.$auth.loggedIn && this.stateregtoast) {
+      if (!this.$auth.loggedIn && this.stateregtoast && !localStorage.showSubscriebe) {
         this.$bvModal.show('subscriebe')
       }
     },

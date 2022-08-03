@@ -29,6 +29,11 @@
             </h3>
           </b-col>
         </b-row>
+        <b-row>
+          <b-col class="text-right" cols="12">
+            <b-btn @click="dissableShow()" variant="dark-link">Не показывать больше</b-btn>
+          </b-col>
+        </b-row>
       </div>
       <!-- <div>
         <b-row align-v="center" class="subscriebe-modal-center">
@@ -85,6 +90,10 @@ export default {
     // delay(time) {
     //   return new Promise((resolve) => setTimeout(resolve, time))
     // },
+    dissableShow() {
+      localStorage.showMessage = false
+      this.closeMessage()
+    },
     closeMessage() {
       // this.dissableRegToast()
       this.$bvModal.hide('message')

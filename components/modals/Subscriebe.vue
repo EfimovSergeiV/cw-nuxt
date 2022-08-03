@@ -57,6 +57,11 @@
               </b-row>
             </b-col>
           </b-row>
+          <b-row>
+            <b-col class="text-right" cols="12">
+              <b-btn @click="dissableShow()" variant="dark-link">Не показывать больше</b-btn>
+            </b-col>
+          </b-row>
         </div>
       </transition>
     </div>
@@ -71,6 +76,7 @@ export default {
     return {
       email: '',
       sended: false,
+      showSubscriebe: 'true',
     }
   },
   computed: {
@@ -90,6 +96,10 @@ export default {
     ...mapMutations(['clientEmail', 'dissableRegToast']),
     delay(time) {
       return new Promise((resolve) => setTimeout(resolve, time))
+    },
+    dissableShow() {
+      localStorage.showSubscriebe = false
+      this.closeSubscriebe()
     },
     sendMailSubscriebe() {
       this.$axios
