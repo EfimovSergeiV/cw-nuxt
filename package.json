@@ -1,6 +1,6 @@
 {
   "name": "nuxt-glsvar",
-  "version": "3.3.0",
+  "version": "4.3.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -26,7 +26,6 @@
     "@trysound/sax": "^0.1.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
-    "caniuse-lite": "^1.0.30001274",
     "core-js": "^3.9.1",
     "hooper": "^0.3.4",
     "lodash": "^4.17.21",
