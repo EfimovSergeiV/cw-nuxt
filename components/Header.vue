@@ -87,58 +87,48 @@
         </b-row>
       </b-col>
     </b-row>
-    <b-row class="p-2 text-right">
+    <b-row class="text-right pb-2">
       <b-col cols="12">
-        <!-- <b-row>
-          <b-col cols="12">
-            <b-img
-              src="../assets/images/snow-sm.png"
-              fluid
-              alt="snow"
-              style="width: 390px; margin-bottom: -5px"
+        <ul class="hr">
+          <li>
+            <b-btn size="sm" to="/" variant="warning"><b>Главная</b></b-btn>
+          </li>
+          <li>
+            <b-btn size="sm" to="/cts" variant="warning"
+              ><b>Каталог</b></b-btn
             >
-            </b-img>
-          </b-col>
-        </b-row> -->
-        <b-row>
-          <b-col cols="12">
-            <ul class="hr">
-              <li>
-                <b-btn size="sm" to="/" variant="warning"><b>Главная</b></b-btn>
-              </li>
-              <li>
-                <b-btn size="sm" to="/cts" variant="warning"
-                  ><b>Каталог</b></b-btn
-                >
-              </li>
-              <li>
-                <b-btn size="sm" to="/liked" variant="warning"
-                  ><b>Избранное</b> <b-badge variant="dark"></b-badge
-                ></b-btn>
-              </li>
-              <li>
-                <b-btn
-                  :size="CartButtomSize()"
-                  to="/cart"
-                  :variant="CartButtomVariant()"
-                >
-                  <b class="mdi mdi-cart text-dark p-0">Корзина</b>
-                  <b-badge
-                    v-if="cart.length > 0"
-                    :variant="CartButtomVariant()"
-                  >
-                    {{ cart.length }}
-                  </b-badge>
-                </b-btn>
-              </li>
-              <li>
-                <b-btn size="sm" to="/about" variant="warning"
-                  ><b>Магазины</b></b-btn
-                >
-              </li>
-            </ul>
-          </b-col>
-        </b-row>
+          </li>
+          <li>
+            <b-btn size="sm" to="/liked" variant="warning"
+              ><b>Избранное</b> <b-badge variant="dark"></b-badge
+            ></b-btn>
+          </li>
+          <li>
+            <b-btn
+              :size="CartButtomSize()"
+              to="/cart"
+              :variant="CartButtomVariant()"
+            >
+              <b class="mdi mdi-cart text-dark p-0">Корзина</b>
+              <b-badge
+                v-if="cart.length > 0"
+                :variant="CartButtomVariant()"
+              >
+                {{ cart.length }}
+              </b-badge>
+            </b-btn>
+          </li>
+          <li>
+            <b-btn size="sm" to="/f" variant="warning"
+              ><b>ГС Клуб</b></b-btn
+            >
+          </li>
+          <li>
+            <b-btn size="sm" to="/about" variant="warning"
+              ><b>Магазины</b></b-btn
+            >
+          </li>
+        </ul>
       </b-col>
     </b-row>
     <b-modal
