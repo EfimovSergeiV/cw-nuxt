@@ -118,11 +118,11 @@
               </b-badge>
             </b-btn>
           </li>
-          <li>
+          <!-- <li>
             <b-btn size="sm" to="/f" variant="warning"
               ><b>ГС Клуб</b></b-btn
             >
-          </li>
+          </li> -->
           <li>
             <b-btn size="sm" to="/about" variant="warning"
               ><b>Магазины</b></b-btn
