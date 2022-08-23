@@ -14,6 +14,7 @@
               >
                 <b-img-lazy
                   :src="product.preview_image"
+                  onerror="this.src='../../noimage-235-177.jpg'"
                   :alt="product.name"
                   height="187"
                   width="245"
