@@ -85,6 +85,7 @@
             <slide v-for="(banner, br) in mbanners" :key="br">
               <b-img
                 :src="banner.image"
+                onerror="this.src='./noimage-960-540.jpg'"
                 width="960"
                 height="540"
                 rounded

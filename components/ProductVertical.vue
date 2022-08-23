@@ -7,6 +7,7 @@
             <div style="position: relative">
               <b-img
                 :src="product.preview_image"
+                onerror="this.src='../../noimage-235-177.jpg'"
                 fluid
                 rounded
                 class="p-1"

@@ -12,6 +12,7 @@
             <router-link :to="{ name: 'product-id', params: { id: neue.id } }">
               <b-img
                 :src="neue.preview_image"
+                onerror="this.src='../../noimage-235-177.jpg'"
                 width="235px"
                 height="177px"
                 rounded
