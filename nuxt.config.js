@@ -147,8 +147,8 @@ export default {
 
   recaptcha: {
     hideBadge: false,
-    siteKey: '6LfKsqohAAAAAGdmV2JPyZrdkw8w792Ew-YRMtdp',
-    version: 2,
+    siteKey: '6LeFtqohAAAAAJqCMzcJoFI4LX39ndSM2ANzZzCN',
+    version: 3,
   },
 
 
