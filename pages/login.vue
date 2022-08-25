@@ -6,7 +6,7 @@
       class="text-dark"
       style="height: 80vh"
     >
-      <b-col lg="6" class="text-center bg-light p-4" style="border-radius: 3px">
+      <b-col lg="6" class="text-center bg-white p-4" style="border-radius: 3px">
         <b-row>
           <b-col cols="12">
             <h4>Авторизация</h4>

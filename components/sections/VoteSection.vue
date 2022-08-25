@@ -10,12 +10,12 @@
     </b-row>
     <b-row align-v="center">
       <b-col class="h-100" cols="6">
-        <div class="bg-light p-2 text-center">
+        <div class="bg-white p-2 text-center">
           <h4>{{ vote }}</h4>
         </div>
       </b-col>
       <b-col class="h-100" cols="6">
-        <div class="bg-light p-2">
+        <div class="bg-white p-2">
           <b-form-group :id="num">
             <b-form-radio-group
               :id="num"

@@ -3,7 +3,7 @@
     <!-- <p class="text-light">{{ reslike }}</p> -->
     <b-row class="mb-2">
       <b-col cols="12">
-        <div class="bg-light p-1" style="border-radius: 3px">
+        <div class="bg-white p-1" style="border-radius: 3px">
           <b-btn
             class="mdi mdi-account text-left"
             variant="link-dark"

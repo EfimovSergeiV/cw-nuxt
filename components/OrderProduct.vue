@@ -10,7 +10,7 @@
           <b-col cols="12" lg="8">
             <b-row>
               <b-col cols="4" md="3">
-                <div class="bg-light">
+                <div class="bg-white">
                   <b-img
                     class="cart-img"
                     :src="product.preview_image"

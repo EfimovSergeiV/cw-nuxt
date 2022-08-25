@@ -1,5 +1,5 @@
 <template>
-  <div class="text-dark bg-light p-2" style="border-radius: 3px">
+  <div class="text-dark bg-white p-2" style="border-radius: 3px">
     <b-row>
       <b-col cols="6">
         <h5>Мой профиль</h5>

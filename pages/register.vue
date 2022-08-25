@@ -6,7 +6,7 @@
       class="text-dark"
       style="height: 80vh"
     >
-      <b-col lg="8" class="bg-light p-4" style="border-radius: 3px">
+      <b-col lg="8" class="bg-white p-4" style="border-radius: 3px">
         <b-row class="mb-4">
           <b-col class="text-center" cols="12">
             <h4>Регистрация</h4>

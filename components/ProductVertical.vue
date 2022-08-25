@@ -1,7 +1,7 @@
 <template>
   <b-row align-h="center" class="mt-3 mb-3">
     <b-col>
-      <div class="bg-light pt-2 pb-2" style="border-radius: 3px">
+      <div class="bg-white pt-2 pb-2" style="border-radius: 3px">
         <b-row>
           <b-col class="text-center" cols="12">
             <div style="position: relative">

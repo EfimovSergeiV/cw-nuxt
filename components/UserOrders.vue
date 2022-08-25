@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-dark bg-light p-2"
+    class="text-dark bg-white p-2"
     style="border-radius: 3px; min-height: 30vh"
   >
     <b-row>
