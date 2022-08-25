@@ -139,14 +139,18 @@ export default {
     },
   },
 
+  // recaptcha: {
+  //   hideBadge: false,
+  //   siteKey: '6Le7bPobAAAAAAS0_t5p-s6jXjh20mefrMNZmDxy',
+  //   version: 3,
+  // },
+
   recaptcha: {
-    hideBadge: false, // Hide badge element (v3 & v2 via size=invisible)
-    // language: String, // Recaptcha language (v2)
-    // siteKey: '6Le7bPobAAAAAAS0_t5p-s6jXjh20mefrMNZmDxy', // 6Le7bPobAAAAAKwG2O557jMz0_P0uNYlhezu1s2t Site key for requests
-    siteKey: '6LeE3ZAUAAAAANVaDO60w4ZBK44khqO7OpsitZNY',
-    version: 3, // Version
-    // size: String, // Size: 'compact', 'normal', 'invisible' (v2)
+    hideBadge: false,
+    siteKey: '6Le7bPobAAAAAAS0_t5p-s6jXjh20mefrMNZmDxy',
+    version: 3,
   },
+
 
   // optimizedImages: {
   //   optimizeImages: true,

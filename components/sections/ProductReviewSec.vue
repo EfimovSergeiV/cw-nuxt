@@ -79,8 +79,13 @@
           ></b-form-textarea>
         </b-col>
       </b-row>
-      <b-row class="mt-2">
-        <b-col class="text-right" md="12">
+      <b-row class="mt-4 mb-4">
+        <b-col cols="12">
+          <recaptcha class="recaptcha-style" />
+        </b-col>
+      </b-row>
+      <b-row class="h-100" align-h="center">
+        <b-col class="text-right" cols="12">
           <!-- <b-form-rating
             id=""
             v-model="grade"
@@ -89,9 +94,10 @@
             autocomplete
             size="sm"
           ></b-form-rating> -->
-          <b-btn variant="link-dark" class="mdi mdi-robot-off-outline" size="sm" @click="ImNotRobot()"> Я не робот</b-btn>
-          <b-btn variant="warning" :disabled="hidesendbtn" class="mdi mdi-send-outline" size="sm" @click="sendReview()"> Отправить</b-btn>
+          <b-btn variant="link-dark" class="mt-2 mdi mdi-robot-off-outline" size="sm" @click="ImNotRobot()"> Я не робот</b-btn>
+          <b-btn variant="warning" :disabled="hidesendbtn" class="mdi mdi-send-outline" @click="sendReview()"> Отправить</b-btn>
         </b-col>
+        
       </b-row>
     </div>
   </div>
@@ -160,3 +166,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.recaptcha-style {
+  display: flex;
+  justify-content: right;
+}
+</style>
