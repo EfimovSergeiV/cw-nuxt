@@ -114,25 +114,26 @@
       </b-col>
     </b-row>
 
-    <b-row class="mt-2">
-      <b-col cols="12">
-        <b-form-textarea
-          id="textarea"
-          v-model="post"
-          placeholder="Ваш комментарий..."
-          rows="3"
-        ></b-form-textarea>        
-      </b-col>
-    </b-row>
-    <b-row class="mt-2">
-      <b-col cols="8">
-        <b-form-input v-model="username" placeholder="Как к вам обращаться?"></b-form-input>
-      </b-col>
-      <b-col cols="4" class="text-right">
-        <b-btn block class="mdi mdi-send" @click="sendComment(username, post)" variant="warning"> Отправить</b-btn>
-      </b-col>
-    </b-row>
-
+    <div v-if="visibleform">
+      <b-row class="mt-2">
+        <b-col cols="12">
+          <b-form-textarea
+            id="textarea"
+            v-model="post"
+            placeholder="Ваш комментарий..."
+            rows="3"
+          ></b-form-textarea>        
+        </b-col>
+      </b-row>
+      <b-row class="mt-2">
+        <b-col cols="8">
+          <b-form-input v-model="username" placeholder="Как к вам обращаться?"></b-form-input>
+        </b-col>
+        <b-col cols="4" class="text-right">
+          <b-btn block class="mdi mdi-send" @click="sendComment(username, post)" variant="warning"> Отправить</b-btn>
+        </b-col>
+      </b-row>
+    </div>
   </div>
 </template>
 
@@ -152,7 +153,8 @@ export default {
     return {
       opts: this.$route.query,
       username: "",
-      post: ""
+      post: "",
+      visibleform: false,
     }
   },
   head() {
@@ -170,6 +172,7 @@ export default {
   methods: {
     sendComment(username, post) {
       console.log( this.posts.length + 1)
+      this.visibleform = false
       this.posts.push({"username": username, "post": post})
     }
   }

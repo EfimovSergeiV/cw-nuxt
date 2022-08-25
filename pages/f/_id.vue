@@ -75,7 +75,7 @@
             </b-row>
 
             <b-row class="pl-3 pr-3 pb-1 mt-3">
-              <b-col cols="12" class="">
+              <b-col cols="12" class="text-dark">
                 <small v-if="topic.description.length > 500" class="" v-html="topic.description.slice(0, 500)" />
                 <small v-else class="" v-html="topic.description" />
               </b-col>

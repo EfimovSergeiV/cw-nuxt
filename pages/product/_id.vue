@@ -155,7 +155,7 @@
 
         <b-row class="mt-4 mh-40">
           <b-col cols="12">
-            <div class="mb-4 prod-comp-block h-100">
+            <div class="prod-comp-block h-100">
               <b-tabs content-class="mt-3" fill>
                 <b-tab title="Отзывы">
                   <ProductReviewSec :reviews="reviews" :prodid="product.id" />
