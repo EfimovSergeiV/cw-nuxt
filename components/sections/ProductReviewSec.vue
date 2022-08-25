@@ -79,12 +79,12 @@
           ></b-form-textarea>
         </b-col>
       </b-row>
-      <b-row class="mt-4 mb-4">
+      <!-- <b-row class="mt-4 mb-4">
         <b-col cols="12">
           <recaptcha class="recaptcha-style" />
         </b-col>
-      </b-row>
-      <b-row class="h-100" align-h="center">
+      </b-row> -->
+      <b-row class="h-100 mt-2" align-h="center">
         <b-col class="text-right" cols="12">
           <!-- <b-form-rating
             id=""
