@@ -150,7 +150,7 @@
                 <b-col cols="9">
                   <b-row>
                     <b-col cols="12">
-                      <a href="/"> Нажмите что бы обновить </a>
+                      <a href="/" @click="clearStorage()"> Нажмите что бы обновить </a>
                     </b-col>
                   </b-row>
                 </b-col>
@@ -218,6 +218,10 @@ export default {
     // ...mapMutations(['clientEmail']),
     pageUpdate() {
       this.$router.go('/')
+    },
+    clearStorage() {
+      console.log("STORAGE CLEARING")
+      localStorage.clear()
     },
     // async sendMail() {
     //   try {
