@@ -220,7 +220,6 @@ export default {
       this.$router.go('/')
     },
     clearStorage() {
-      console.log("STORAGE CLEARING")
       localStorage.clear()
     },
     // async sendMail() {
