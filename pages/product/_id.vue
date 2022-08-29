@@ -11,7 +11,7 @@
           <b-col cols="12">
             <div class="text-dark">
               <b-breadcrumb>
-                <b-breadcrumb-item href="/">
+                <b-breadcrumb-item to="/">
                   <b-icon
                     icon="house-fill"
                     scale="1.25"
@@ -20,7 +20,7 @@
                   ></b-icon>
                   Главная
                 </b-breadcrumb-item>
-                <b-breadcrumb-item href="/cts"> Каталог </b-breadcrumb-item>
+                <b-breadcrumb-item to="/cts"> Каталог </b-breadcrumb-item>
 
                 <b-breadcrumb-item
                   v-for="(breadcrumb, pbcb) in breadcrumbs"
