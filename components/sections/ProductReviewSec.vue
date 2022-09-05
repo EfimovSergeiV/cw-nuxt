@@ -45,8 +45,8 @@
     </div>
     <div v-else>
       <b-row class="">
-        <b-col cols="12" class="text-center mt-5">
-          <h3>Ваш отзыв может стать первым</h3>
+        <b-col cols="12" class="text-center text-dark mt-5">
+          <h3 class="text-dark">Ваш отзыв может стать первым</h3>
         </b-col>
       </b-row>
     </div>
@@ -107,12 +107,12 @@
 export default {
   props: {
     reviews: {
-      type: Object,
-      default: Object,
+      type: Array,
+      default: Array,
     },
     prodid: {
-      type: Object,
-      default: Object,
+      type: Number,
+      default: Number,
     },
   },
   data() {

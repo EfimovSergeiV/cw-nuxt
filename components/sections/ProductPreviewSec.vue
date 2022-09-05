@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="text-dark">
     <b-row class="mt-4 mb-4">
       <b-col class="text-center mt-2 mb-2" cols="12" md="4">
         <div
@@ -20,7 +20,7 @@
       <b-col class="mt-2 mb-2" cols="12" md="8">
         <b-row class="h-50">
           <b-col cols="6">
-            <h1 v-if="product.brand">{{ product.brand.brand }}</h1>
+            <h1 v-if="product.brand" class="text-dark">{{ product.brand.brand }}</h1>
             <h1 v-else>Бренд не указан</h1>
             <div class="line-hr"></div>
           </b-col>
@@ -38,14 +38,14 @@
                 <h1>
                   {{ getProductValues(product.prod_price) }}
 
-                  <small>
+                  <small class="text-dark">
                     <del v-if="product.promo" class="product-default-price-off">
                       {{ product.discount }}
                     </del>
                     {{ selectPrice.price.toLocaleString() }}
                   </small>
-                  <small v-if="selectPrice.price > 0">руб.</small>
-                  <small v-else>цена по запросу</small>
+                  <small v-if="selectPrice.price > 0" class="text-dark">руб.</small>
+                  <small v-else class="text-dark">цена по запросу</small>
                 </h1>
               </b-col>
             </b-row>
@@ -64,8 +64,8 @@
                 <b-form-rating
                   id="rating-sm-no-border"
                   :value="product.rating"
-                  show-value
                   variant="dark"
+                  readonly
                   no-border
                   inline
                   size="sm"
@@ -76,7 +76,7 @@
                   <li>
                     <CompBtn
                       :product="product"
-                      :variant="'dark'"
+                      :variant="'link-dark'"
                       :status="true"
                       class="mt-1"
                     />
@@ -84,7 +84,7 @@
                   <li>
                     <LikeBtn
                       :product="product"
-                      :variant="'dark'"
+                      :variant="'link-dark'"
                       :status="true"
                       class="mt-1"
                     />

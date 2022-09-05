@@ -24,8 +24,8 @@
                 <b-breadcrumb-item to="/cts"> Каталог </b-breadcrumb-item>
 
                 <b-breadcrumb-item
-                  v-for="(breadcrumb, bcb) in breadcrumbs"
-                  :key="bcb"
+                  v-for="breadcrumb in breadcrumbs"
+                  :key="breadcrumb.id"
                   :to="{
                     name: 'products',
                     query: { ct: breadcrumb.id },
@@ -139,7 +139,7 @@
             </b-col>
           </b-row>
           <b-row>
-            <b-col v-for="(rand, rd) in rands" :key="rd" cols="6" md="4" lg="3">
+            <b-col v-for="rand in rands" :key="rand.id" cols="6" md="4" lg="3">
               <div
                 class="card mb-4 neue-img box-shadow slide-contain text-center"
                 style="background-color: #fff"
@@ -157,8 +157,8 @@
                   ></b-img>
                 </router-link>
                 <div
-                  v-for="(rnd, r) in rand.prod_price.slice(0, 1)"
-                  :key="r"
+                  v-for="rnd in rand.prod_price.slice(0, 1)"
+                  :key="rnd.id"
                   class="top-right"
                 >
                   <h6 class="hr">{{ rnd.price }}</h6>
@@ -241,8 +241,8 @@
                   name="flavour-2"
                 >
                   <b-form-checkbox
-                    v-for="(brand, brnd) in brands"
-                    :key="brnd"
+                    v-for="brand in brands"
+                    :key="brand.id"
                     :value="brand.id"
                     >{{ brand.brand }}</b-form-checkbox
                   >
@@ -254,7 +254,7 @@
 
         <div v-if="props">
           <div>
-            <div v-for="(prop, prb) in props" :key="prb">
+            <div v-for="(prop, prb) in props" :key="prop.id">
               <b-button
                 v-b-toggle="String(prb)"
                 variant="link text-left"
@@ -298,7 +298,7 @@
                           >
                             <b-form-radio
                               v-for="opss in prop.prop_ops"
-                              :key="opss"
+                              :key="opss.id"
                               :value="opss.opskey"
                               >{{ opss.ops }}
                             </b-form-radio>
@@ -316,7 +316,7 @@
                       >
                         <b-form-checkbox
                           v-for="opss in prop.prop_ops"
-                          :key="opss"
+                          :key="opss.id"
                           :value="opss.opskey"
                           >{{ opss.ops }}</b-form-checkbox
                         >

@@ -99,7 +99,7 @@ a, a:hover,a:visited, a:focus, .btn-link, .btn-link:hover {
   text-decoration: none !important;
 }
 
-.btn-link, .btn-link:hover, .nav-link {
+.btn-link, .btn-link:hover{
   color: #cecece !important;
 }
 
@@ -109,8 +109,12 @@ a, a:hover,a:visited, a:focus, .btn-link, .btn-link:hover {
   font-weight: 500 !important;
 }
 
+.nav-link {
+  // background-color: #333;
+}
+
 .nav-link.active {
-  background-color: #333 !important;
+  // background-color: #333;
 }
 
 // small, span, p {
@@ -748,10 +752,10 @@ ul.hr {
   background-color: #0000008c;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #333;
-}
+// .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+// 	color: #fff;
+// 	background-color: #333;
+// }
 
 .btn-primary {
 	color: #fff;

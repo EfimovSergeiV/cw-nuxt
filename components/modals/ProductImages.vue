@@ -10,15 +10,12 @@
     <b-carousel
       id="carousel-1"
       ref="prodImg"
-      v-model="slide"
       img-width="640"
       img-height="480"
       interval="10000"
       controls
       indicators
       style="text-shadow: 1px 1px 2px #333"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
     >
       <b-carousel-slide
         v-for="(image, img) in images"
@@ -36,8 +33,8 @@
 export default {
   props: {
     images: {
-      type: Object,
-      default: Object,
+      type: Array,
+      default: Array,
     },
   },
 }

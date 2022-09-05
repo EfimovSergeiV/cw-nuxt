@@ -4,7 +4,7 @@
       <div class="custom-area">
         <b-row class="mt-3 mb-3">
           <b-col cols="12">
-            <h1 class="text-uppercase prod-comp-block">{{ product.name }}</h1>
+            <h1 class="text-uppercase text-bold font-weight-bold">{{ product.name }}</h1>
           </b-col>
         </b-row>
         <b-row class="mb-3">
@@ -43,19 +43,18 @@
           </b-col>
         </b-row>
 
-        <div class="text-light product-info__background p-1">
+        <div class="bg-white p-1" style="border-radius: 3px;">
           <ProductPreviewSec :product="product" class="mb-4" />
-          <div class="line-hr mb-2"></div>
           <!-- '91.204.138.138' -->
           <!-- '127.0.0.1' -->
-          <CDEK
+          <!-- <CDEK
             v-if="ip === '91.204.138.138'"
             :products="Array(product)"
             :carttotal="getProductValues(product.prod_price).price"
             :regions="regions"
-          />
+          /> -->
           <div class="line-hr mt-1 mb-1"></div>
-          <b-row class="mt-4 mb-4">
+          <b-row class="m-1 mt-4 mb-4">
             <b-col cols="12">
               {{ product.description }}
             </b-col>
@@ -155,7 +154,7 @@
 
         <b-row class="mt-4 mh-40">
           <b-col cols="12">
-            <div class="prod-comp-block h-100">
+            <div class="bg-white p-2 h-100" style="border-radius: 3px;">
               <b-tabs content-class="mt-3" fill>
                 <b-tab title="Отзывы">
                   <ProductReviewSec :reviews="reviews" :prodid="product.id" />
@@ -187,12 +186,12 @@
                   <div v-else>
                     <div v-for="(prod_link, pl) in product.prod_link" :key="pl">
                       <ul>
-                        <li class="mt-4">
-                          <b class="ml-2">{{ pl + 1 }}.</b>
+                        <li class="m-4">
+                          <b>{{ pl + 1 }}.</b>
                           <a
                             v-b-tooltip.topright
                             target="blank"
-                            class="m-4 text-light"
+                            class="m-4"
                             variant="link"
                             :href="prod_link.url"
                             :title="prod_link.description"
@@ -200,7 +199,7 @@
                             {{ prod_link.name }}
                           </a>
                           <br />
-                          <div class="prod-link-description">
+                          <div class="">
                             <small>{{ prod_link.description }}</small>
                           </div>
                         </li>

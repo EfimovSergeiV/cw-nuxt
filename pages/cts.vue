@@ -30,7 +30,7 @@
                 }"
                 ><b class="ct-name">{{ sec.name }}</b>
               </b-btn>
-              <b-col v-for="ct in sec.inserted" :key="ct" cols="12">
+              <b-col v-for="ct in sec.inserted" :key="ct.id" cols="12">
                 <b-dropdown
                   v-if="ct.inserted.length > 0"
                   id="dropdown-dropright"
@@ -53,8 +53,8 @@
                     >
                     <br />
                     <b-btn
-                      v-for="(link, l) in ct.inserted"
-                      :key="l"
+                      v-for="link in ct.inserted"
+                      :key="link.id"
                       variant="link"
                       size="sm"
                       class="text-light"

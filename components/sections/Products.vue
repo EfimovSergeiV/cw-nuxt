@@ -166,8 +166,8 @@ export default {
   },
   props: {
     products: {
-      type: Object,
-      default: Object,
+      type: Array,
+      default: Array,
     },
   },
   data() {

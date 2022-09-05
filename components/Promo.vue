@@ -43,7 +43,9 @@
       </b-col>
     </b-row>
 
-    <b-row class="mt-2">
+
+
+    <!-- <b-row class="mt-2">
       <b-col cols="12">
         <hooper
           class="promo__carousel-hooper"
@@ -90,7 +92,7 @@
           </slide>
         </hooper>
       </b-col>
-    </b-row>
+    </b-row> -->
   </div>
 </template>
 
@@ -114,25 +116,7 @@ export default {
       type: Array,
       default: Array,
     },
-    // recommend: {
-    //   type: Array,
-    //   default: Array,
-    // },
   },
-  // data() {
-  //   return {
-  //     mpromobs: null,
-  //     recmnds: null,
-  //   }
-  // },
-  // async fetch() {
-  //   this.mpromobs = await fetch(
-  //     'https://api.glsvar.ru/c/mpromob/'
-  //   ).then((res) => res.json())
-  //   this.recmnds = await fetch(
-  //     'https://api.glsvar.ru/c/recommend/'
-  //   ).then((res) => res.json())
-  // },
   methods: {
     fallowRoute(abpath) {
       if (abpath !== null) {
@@ -151,19 +135,6 @@ export default {
 </script>
 
 <style scoped>
-/* .promo-container {
-  min-height: 100%;
-} */
-/* .promo-full {
-  width: 100%;
-  height: 100%;
-} */
-/* .second-promo {
-  text-align: center;
-  border-radius: 2px;
-  background-color: #ffffff;
-} */
-
 .promo-slide {
   border: 1px solid yellow;
   border-radius: 5px;

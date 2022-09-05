@@ -42,7 +42,7 @@
                     </div>
                   </b-col>
                   <b-col class="text-right text-warning" cols="12">
-                    <div v-for="phone in shop.phones" :key="phone">
+                    <div v-for="phone in shop.phones" :key="phone.id">
                       <a :href="'tel:' + phone.link"
                         ><h5 class="shadow-header text-warning">
                           {{ phone.number }}

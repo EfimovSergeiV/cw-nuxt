@@ -1,15 +1,15 @@
 <template>
-  <div class="text-light">
+  <div class="text-dark">
     <b-row>
       <b-col>
-        <h4 class="mt-4 mb-4 text-warning">
+        <h4 class="mt-4 mb-4 text-uppercase text-light">
           Приветствуем Вас в нашем фирменном интернет-магазине «Главный
           Сварщик»!
         </h4>
       </b-col>
     </b-row>
 
-    <div class="warning-border">
+    <div class="">
       <b-card no-body>
         <b-tabs pills vertical nav-wrapper-class="w-50">
           <b-tab v-for="(shop, sh) in shops" :key="sh" :title="shop.adress">
@@ -58,7 +58,7 @@
       </b-card>
     </div>
 
-    <div class="mt-4 warning-border about-bg-dark">
+    <div class="mt-4 p-2 bg-white" style="border-radius: 3px;">
       <b-row class="mt-4 mb-4">
         <b-col cols="12">
           <h5>
@@ -86,27 +86,27 @@
       <b-row class="mt-2">
         <b-col cols="12" lg="4">
           <p>
-            <b class="text-warning">Гарантируем</b>
+            <b class="text-uppercase">Гарантируем</b>
             хорошее качество продукции и профессиональную консультацию по любым
             вопросам
           </p>
         </b-col>
         <b-col cols="12" lg="4">
           <p>
-            <b class="text-warning">Поможем</b>
+            <b class="text-uppercase">Поможем</b>
             Вам сделать выбор среди огромного ассортимента аппаратов для сварки.
           </p>
         </b-col>
         <b-col cols="12" lg="4">
           <p>
-            <b class="text-warning">Подскажем</b>
+            <b class="text-uppercase">Подскажем</b>
             Вам, как приобрести высококачественное сварочное оборудование.
           </p>
         </b-col>
       </b-row>
     </div>
 
-    <div class="warning-border about-bg-dark mt-4">
+    <div class="p-2 bg-white mt-4" style="border-radius: 3px;">
       <b-row class="mt-2 mb-2">
         <b-col cols="12" md="8" class="block mt-1">
           <h4>От нас вы получите:</h4>
@@ -143,7 +143,7 @@
       </b-row>
       <b-row>
         <b-col class="text-right pb-4 mt-4">
-          <h4 class="text-warning">Приятных покупок!</h4>
+          <h4 class="text-uppercase">Приятных покупок!</h4>
         </b-col>
       </b-row>
     </div>
@@ -173,11 +173,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.about-bg-dark {
-  background-color: #00000050;
-  padding: 10px;
-  border-radius: 5px;
-}
-</style>

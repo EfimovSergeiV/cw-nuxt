@@ -100,7 +100,7 @@
           :infinite-scroll="true"
           style="height: 100%"
         >
-          <slide v-for="product in products.results" :key="product">
+          <slide v-for="product in products.results" :key="product.id">
             <div class="p-1">
               <ProductVertical :product="product" />
             </div>
@@ -177,8 +177,8 @@ export default {
   },
   props: {
     products: {
-      type: Array,
-      default: Array,
+      type: Object,
+      default: Object,
     },
     banners: {
       type: Array,
