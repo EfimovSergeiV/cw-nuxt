@@ -3,8 +3,7 @@
     <b-row>
       <b-col>
         <h4 class="mt-4 mb-4 text-uppercase text-light">
-          Приветствуем Вас в нашем фирменном интернет-магазине «Главный
-          Сварщик»!
+          Приветствуем Вас в нашем фирменном интернет-магазине «Главный Сварщик»!
         </h4>
       </b-col>
     </b-row>
@@ -17,13 +16,16 @@
               <b-row>
                 <b-col>
                   <b-row>
-                    <b-col>
+                    <b-col md="8">
                       <h6>
                         <small>Телефон:</small>
-                        <a class="text-light" :href="'tel:' + shop.phone">
+                        <a class="text-dark" :href="'tel:' + shop.phone">
                           {{ shop.phone }}
                         </a>
                       </h6>
+                    </b-col>
+                    <b-col class="text-right mr-1">
+                      <b-btn @click="copyToBuffer(shop.adress)" class="mdi mdi-content-copy" size="sm" variant="outline-dark"></b-btn>
                     </b-col>
                   </b-row>
                   <small>Режим работы:</small>
@@ -58,7 +60,7 @@
       </b-card>
     </div>
 
-    <div class="mt-4 p-2 bg-white" style="border-radius: 3px;">
+    <div class="mt-4 p-2 text-white" style="border-radius: 3px;">
       <b-row class="mt-4 mb-4">
         <b-col cols="12">
           <h5>
@@ -106,7 +108,7 @@
       </b-row>
     </div>
 
-    <div class="p-2 bg-white mt-4" style="border-radius: 3px;">
+    <div class="p-2 text-light mt-4" style="border-radius: 3px;">
       <b-row class="mt-2 mb-2">
         <b-col cols="12" md="8" class="block mt-1">
           <h4>От нас вы получите:</h4>
@@ -171,5 +173,13 @@ export default {
       ],
     }
   },
+  methods: {
+    copyToBuffer(addres) {
+      navigator.clipboard.writeText(addres)
+      .then(() => {
+        console.log("Получилось")
+      })
+    }
+  }
 }
 </script>
