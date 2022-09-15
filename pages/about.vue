@@ -177,7 +177,13 @@ export default {
     copyToBuffer(addres) {
       navigator.clipboard.writeText(addres)
       .then(() => {
-        console.log("Получилось")
+        this.$bvToast.toast(
+          addres,
+          {
+            title: 'Скопировано в буфер обмена',
+            variant: 'success',
+          }
+        )
       })
     }
   }
