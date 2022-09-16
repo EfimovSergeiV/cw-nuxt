@@ -16,26 +16,24 @@
               <b-row>
                 <b-col>
                   <b-row>
-                    <b-col md="8">
+                    <b-col cols="12" class="text-right mr-1">
+                      <b-btn @click="copyToBuffer(shop.adress)" class="mdi mdi-content-copy" size="sm" variant="outline-dark"></b-btn>
+                    </b-col>
+                   
+                  </b-row>
+                  <small>Режим работы:</small>
+                  <b-row>
+                    <b-col><h6>{{ shop.wday }}</h6></b-col>
+                    <b-col><h6>{{ shop.wend }}</h6></b-col>
+                    <b-col cols="12">
                       <h6>
                         <small>Телефон:</small>
                         <a class="text-dark" :href="'tel:' + shop.phone">
                           {{ shop.phone }}
                         </a>
                       </h6>
-                    </b-col>
-                    <b-col class="text-right mr-1">
-                      <b-btn @click="copyToBuffer(shop.adress)" class="mdi mdi-content-copy" size="sm" variant="outline-dark"></b-btn>
-                    </b-col>
-                  </b-row>
-                  <small>Режим работы:</small>
-                  <b-row>
-                    <b-col
-                      ><h6>{{ shop.wday }}</h6></b-col
-                    >
-                    <b-col
-                      ><h6>{{ shop.wend }}</h6></b-col
-                    >
+                    </b-col>                        
+                   
                   </b-row>
                   <div class="pr-2">
                     <iframe
@@ -60,7 +58,7 @@
       </b-card>
     </div>
 
-    <div class="mt-4 p-2 text-white" style="border-radius: 3px;">
+    <div class="mt-4 p-2 text-dark bg-white" style="border-radius: 3px;">
       <b-row class="mt-4 mb-4">
         <b-col cols="12">
           <h5>
