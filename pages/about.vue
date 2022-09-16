@@ -17,7 +17,9 @@
                 <b-col>
                   <b-row>
                     <b-col cols="12" class="text-right mr-1">
-                      <b-btn @click="copyToBuffer(shop.adress)" class="mdi mdi-content-copy" size="sm" variant="outline-dark"></b-btn>
+                      <b-btn @click="copyToBuffer(shop.adress)" class="mdi mdi-content-copy" size="sm" variant="outline-dark">
+                        Скопировать адрес
+                      </b-btn>
                     </b-col>
                    
                   </b-row>
