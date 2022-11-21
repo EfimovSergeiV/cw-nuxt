@@ -21,7 +21,7 @@
           <b-form-input
             v-model="contact"
             size="sm"
-            placeholder="Как с вами связаться"
+            placeholder="Как с вами связаться?"
           ></b-form-input>
           <b-form-select
             v-model="theme"
@@ -107,29 +107,40 @@ export default {
       }
     },
     sendMessage() {
-      this.$axios
-        .$post('u/feedback/', {
-          person: this.person,
-          contact: this.contact,
-          theme: this.theme,
-          text: this.text,
-        })
-        .then((response) => {
-          this.$bvModal.hide('contactus')
-          this.$bvToast.toast(
-            'Мы отреагируем на ваше сообщение в ближайшее время',
-            {
-              title: 'Сообщение отправлено',
-              variant: 'success',
-            }
-          )
-        })
-        .catch(() => {
-          this.$bvToast.toast('Проверьте правильность заполнения формы', {
-            title: 'Ошибка',
-            variant: 'danger',
+      if (this.contact) {
+        this.$axios
+          .$post('u/feedback/', {
+            person: this.person,
+            contact: this.contact,
+            theme: this.theme,
+            text: this.text,
           })
-        })
+          .then((response) => {
+            this.$bvModal.hide('contactus')
+            this.$bvToast.toast(
+              'Мы свяжемся с вами в ближайшее время',
+              {
+                title: 'Сообщение отправлено',
+                variant: 'success',
+              }
+            )
+          })
+          .catch(() => {
+            this.$bvToast.toast('Проверьте правильность заполнения формы', {
+              title: 'Ошибка',
+              variant: 'danger',
+            })
+          })        
+      } else {
+        this.$bvToast.toast(
+          'Укажите в форме ваши контакты, что бы могли с вами связаться.',
+          {
+            title: 'Сообщение не отправлено',
+            variant: 'danger',
+          }
+        )
+      }
+
     },
   },
 }
