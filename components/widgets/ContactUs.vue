@@ -6,18 +6,18 @@
       hide-backdrop
       hide-footer
       button-size="sm"
-      size="xl"
+      size="md"
       title="Написать менеджеру"
     >
       <b-row>
-        <b-col class="mt-2 mb-2" md="6">
+        <b-col class="mt-2 mb-2" cols="12">
           <b-form-input
             v-model="person"
             size="sm"
             placeholder="Как к вам обращаться?"
           ></b-form-input>
         </b-col>
-        <b-col class="mt-2 mb-2" md="6">
+        <b-col class="mt-2 mb-2" cols="12">
           <b-form-input
             v-model="contact"
             size="sm"
@@ -37,15 +37,14 @@
             id="textarea"
             v-model="text"
             size="sm"
-            placeholder="Напишите сообщение"
-            rows="5"
-            max-rows="20"
+            placeholder="Напишите что-нибудь"
+            rows="8"
           ></b-form-textarea>
         </b-col>
       </b-row>
-      <b-row>
-        <b-col cols="8"></b-col>
-        <b-col class="text-right" cols="4">
+      <b-row class="mt-4">
+        <b-col cols="12"></b-col>
+        <b-col class="text-right" cols="12">
           <transition name="absolute-left-emergence">
             <b-btn
               v-if="re_token"
@@ -75,6 +74,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data() {
     return {
@@ -90,6 +91,11 @@ export default {
         { value: 'info', text: 'Для жалоб и предложений' },
       ],
     }
+  },
+  computed: {
+    ...mapState({
+      shop: (state) => state.shop,
+    }),
   },
   methods: {
     async ImNotRobot() {
@@ -110,6 +116,7 @@ export default {
       if (this.contact) {
         this.$axios
           .$post('u/feedback/', {
+            city: this.shop.city,
             person: this.person,
             contact: this.contact,
             theme: this.theme,
