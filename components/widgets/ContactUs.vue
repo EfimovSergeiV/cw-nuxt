@@ -9,6 +9,12 @@
       size="md"
       title="Написать менеджеру"
     >
+      <b-row class="mb-4">
+        <b-col cols="12" class="mb-1">Ваш город: {{ shop.city }}</b-col>
+        <b-col cols="12">
+          <b-form-input v-model="customCity" size="sm" placeholder="Указать другой город"></b-form-input>
+        </b-col>
+      </b-row>
       <b-row>
         <b-col class="mt-2 mb-2" cols="12">
           <b-form-input
@@ -84,6 +90,7 @@ export default {
       text: null,
       theme: null,
       re_token: false,
+      customCity: null,
       options: [
         { value: null, text: 'Выберите тему сообщения' },
         { value: 'order', text: 'Подать заявку или другое' },
@@ -116,7 +123,7 @@ export default {
       if (this.contact) {
         this.$axios
           .$post('u/feedback/', {
-            city: this.shop.city,
+            city: `(a) ${this.shop.city}/ (m) ${ this.customCity }`,
             person: this.person,
             contact: this.contact,
             theme: this.theme,
