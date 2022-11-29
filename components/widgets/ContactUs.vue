@@ -123,7 +123,7 @@ export default {
       if (this.contact) {
         this.$axios
           .$post('u/feedback/', {
-            city: `(a) ${this.shop.city}/ (m) ${ this.customCity }`,
+            city: `(a) ${this.shop.city} / (m) ${ this.customCity }`,
             person: this.person,
             contact: this.contact,
             theme: this.theme,
