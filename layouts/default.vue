@@ -81,8 +81,8 @@ export default {
   data() {
     return {
       loading: true,
-      // neuesjahr: 'snow-container',
-      neuesjahr: '',
+      neuesjahr: 'snow-container',
+      // neuesjahr: '',
     }
   },
   head() {

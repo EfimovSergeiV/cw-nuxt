@@ -71,7 +71,7 @@ export default {
     // '@aceforth/nuxt-optimized-images',
     // '@nuxtjs/html-validator',
     '@nuxtjs/recaptcha',
-    ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 10 }],
+    // ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 10 }],
     [
       '@nuxtjs/yandex-metrika',
       {

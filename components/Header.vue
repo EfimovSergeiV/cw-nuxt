@@ -89,6 +89,15 @@
     </b-row>
     <b-row class="text-right pb-2">
       <b-col cols="12">
+        <div class="">
+          <b-img
+            src="../assets/images/snow-sm.png"
+            width="390"
+            fluid
+            alt="snow"
+            >
+          </b-img>          
+        </div>
         <ul class="hr">
           <li>
             <b-btn size="sm" to="/" variant="warning"><b>Главная</b></b-btn>
