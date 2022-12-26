@@ -37,6 +37,11 @@
             style="height: 100%"
           >
             <slide>
+              <nuxt-link :to="{ name: 'products', query: { ct: 14, brnd: 3 } }">
+                <b-img src="esab-ok.jpg" fluid alt="handy"></b-img>
+              </nuxt-link>
+            </slide>
+            <slide>
               <nuxt-link :to="{ name: 'product-id', params: { id: 1705 } }">
                 <b-img src="rogue-banner.jpg" fluid alt="rebel"></b-img>
               </nuxt-link>
