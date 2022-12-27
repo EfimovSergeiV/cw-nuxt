@@ -37,7 +37,8 @@
             style="height: 100%"
           >
             <slide>
-              <nuxt-link :to="{ name: 'products', query: { ct: 14, brnd: 3 } }">
+              <!-- https://glsvar.ru/prods?ct=31&w4r4=ok48.00 -->
+              <nuxt-link :to="{ name: 'products', query: { ct: 31, w4r4: 'ok48.00' } }">
                 <b-img src="esab-ok.jpg" fluid alt="handy"></b-img>
               </nuxt-link>
             </slide>
